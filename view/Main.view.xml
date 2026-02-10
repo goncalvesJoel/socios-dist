@@ -1,6 +1,23 @@
-<mvc:View controllerName="socios.controller.Main"
-    xmlns:mvc="sap.ui.core.mvc"
-    xmlns="sap.m">
-    <Page id="page" title="{i18n>title}">
-    </Page>
+<mvc:View
+    controllerName="socios.controller.Main"
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc">
+    
+    <App>
+        <Page title="Demo SAPUI5">
+            <content>
+                <VBox class="sapUiLargeMargin">
+
+                    <Button text="Adicionar Item" press=".onAddItem"/>
+
+                    <List id="myList" items="{
+                        path: '/items'
+                    }">
+                        <StandardListItem title="{title}" />
+                    </List>
+
+                </VBox>
+            </content>
+        </Page>
+    </App>
 </mvc:View>
